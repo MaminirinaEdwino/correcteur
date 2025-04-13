@@ -40,7 +40,7 @@ def predict(data: request_body):
         if data.mot_a_corriger in element:
             liste2.append(element)
     for element in liste2:
-        if re.match(data.mot_a_corriger,element):
+        if re.match(data.mot_a_corriger,element) or re.fullmatch(data.mot_a_corriger,element):
                 liste3.append(element)
     return liste3
 
